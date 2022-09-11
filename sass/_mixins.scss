@@ -1,0 +1,261 @@
+/* navigation - link for mobile */
+@mixin mynav-bar-link($link-bg) {
+    width: 100px;
+    height: 80px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: $link-bg;
+    text-align: center;
+    margin-right: 10px;
+    opacity: 0.8;
+    text-decoration: none;
+  }
+  /* navigation back ground for mobile */
+  @mixin mynav-bg($bg-color, $bg-width) {
+    width: $bg-width;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $bg-color;
+    height: 15vh;
+  }
+  
+  
+  /* home page - empty-img-border style and animation*/
+  
+  @mixin empty-image-border($img-bor-w, $img-bor-h, $img-bor-t, $img-bor-l) {
+    width: $img-bor-w;
+    height: $img-bor-h;
+    border-radius: 50%;
+    /* box-shadow: 1px 1px 20px $header-text-shadow; */
+    position: absolute;
+    top: $img-bor-t;
+    left: $img-bor-l;
+    animation: empty-image-anim 10s ease-in-out infinite;
+  }
+  @keyframes empty-image-anim {
+    from {
+     
+      background-image: linear-gradient(to left, $primary-bg1, $primary-bg2);
+    }
+    to {
+      background-image: linear-gradient(to right, $primary-bg1, $primary-bg2);
+    }
+  }
+  
+  /* btn-section used in bg of the main and header sections (mobile and desktop)*/
+  
+  @mixin btn-section-link($btn-color) {
+    /* align link text in center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    @include myfont($nav-btn-font, 0.75rem, $black);
+    border: none;
+    width: 150px;
+    background-color: $btn-color;
+    padding: 8px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  /* display -flex mixin */
+  
+  @mixin d-flex(
+    $f-dir,
+    $f-wrap: nowrap,
+    $f-j-content: center,
+    $f-a-item: center
+  ) {
+    display: flex;
+    flex-direction: $f-dir;
+    flex-wrap: $f-wrap;
+    justify-content: $f-j-content;
+    align-items: $f-a-item;
+  }
+  
+  @mixin myposition($mypos, $mytop: 0, $myright: 0, $mybottom: 0, $myleft: 0) {
+    position: $mypos;
+    top: $mytop;
+    right: $myright;
+    bottom: $mybottom;
+    left: $myleft;
+  }
+  /* +++++++++++++++++++++++++++++ */
+  /* animation */
+  /* header text - animation (animation used in white-bg text,while loading )*/
+  /* text animation */
+  @keyframes text-anim {
+    from {
+      opacity: 0.1;
+      transform: translateY(150px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+  }
+  
+  /* +++++++++++++++++++++++++++++ */
+  /* work - animation */
+  /* work-image -animation */
+  @keyframes work-img-anim {
+    0% {
+      opacity: 0.3;
+      transform: translateY(500px) scale(0.1);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-500px) scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+  }
+  
+  /* work-hover-text-animation */
+  @keyframes work-text-anim {
+    0% {
+      /*  opacity:0.0; */
+      height: (0%);
+    }
+    100% {
+      /* opacity:1; */
+      height: (100%);
+    }
+  }
+  
+  /* work */
+  /* ++++++++++++++++++++++++++++ */
+  /* about-me section */
+  /* about me header */
+  @keyframes about-header-anim {
+    from {
+      opacity: 0.1;
+      transform: translateX(-150px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+  /* about me text*/
+  @keyframes about-text-anim {
+    0% {
+      opacity: 0.1;
+      transform: translateX(-150px) scale(0.9);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(300px) scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+  
+  /* hand amination- about page */
+  
+  @keyframes hand-anim {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    50% {
+      transform: rotateZ(90deg);
+    }
+    100% {
+      transform: rotateZ(0deg);
+    }
+  }
+  
+  /* about -desktop -hover animation */
+  @keyframes about-hover-anim {
+    0% {
+      opacity: 0.4;
+      transform: rotateY(0deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateY(360deg);
+    }
+  }
+  /* +++++++++++++++++++++++++++++++++++++++ */
+  /* toolchain animation */
+  
+  @mixin toolmixin($p-tool, $tool-delay) {
+    @if $p-tool%2 == 0 {
+      animation: tool-anim-left 1s $tool-delay ease-in-out forwards;
+    } @else {
+      animation: tool-anim-right 1s $tool-delay ease-in-out forwards;
+    }
+  }
+  @keyframes tool-anim-right {
+    from {
+     
+      opacity: 0;
+      transform: translateX(-200px) rotate(-45deg);
+    }
+    to {
+      
+      opacity: 1;
+      transform: translateX(0px) rotate(0deg);
+    }
+  }
+  @keyframes tool-anim-left {
+    from {
+      
+      opacity: 0;
+      transform: translateX(200px) rotate(45deg);
+    }
+    to {
+      
+      opacity: 1;
+      transform: translateX(0px) rotate(0deg);
+    }
+  }
+  
+  @keyframes tool-hover-anim {
+    from {
+      opacity: 0.4;
+      transform: rotateY(180deg);
+    }
+    to {
+      background-color: $primary-bg1;
+      color: white;
+      opacity: 1;
+      transform: rotateY(360deg);
+    }
+  }
+  
+  /* +++++++++++++++++++++++++++++++++ */
+  /* contact animation */
+  
+  /* contact -header -animation */
+  
+  @keyframes contact-header-anim {
+    0% {
+      opacity: 0.4;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* contact-desktop */
+  @keyframes contact-desktop-anim {
+    0% {
+      opacity: 0.4;
+      transform: scaleY(0.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+  

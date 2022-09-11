@@ -1,0 +1,25 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Updock&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
+/* nav font 
+font-family: "MuseoModerno", cursive;
+*/
+/* header-name&text 
+font-family: "Calligraffitti", cursive ;|"Montserrat Alternates", sans-serif;
+*/
+/* variables */
+$name-font:"Montserrat Alternates", sans-serif;
+$header-text-font:"Calligraffitti", cursive;
+$nav-btn-font:"MuseoModerno", cursive;
+$about-text:'Karla', sans-serif;
+
+
+@mixin myfont($f-family,$f-size,$f-color){
+  font-family: $f-family;
+  font-size: $f-size;
+  color:$f-color;
+}
+
