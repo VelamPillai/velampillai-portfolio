@@ -645,7 +645,7 @@ footer {
       width: 40%;
       height: 70%;
       padding: 1rem;
-      @include myfont($about-text, 2.25rem, $primary-bg1);
+      @include myfont($about-text, 1.5rem, $primary-bg1);
       border: 5px solid $primary-bg1;
       border-radius: 20px;
       cursor: pointer;
@@ -660,7 +660,7 @@ footer {
         font-size: 2rem;
       } //end hand symbol
       p {
-        @include myfont($about-text, 1.5rem, $black);
+        @include myfont($about-text, 1rem, $black);
         font-weight: bold;
         animation: about-text-anim 3s 2s ease-in-out forwards;
       }
