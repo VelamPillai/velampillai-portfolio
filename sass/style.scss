@@ -660,7 +660,7 @@ footer {
         font-size: 2rem;
       } //end hand symbol
       p {
-        @include myfont($about-text, 2.5rem, $black);
+        @include myfont($about-text, 1.5rem, $black);
         font-weight: bold;
         animation: about-text-anim 3s 2s ease-in-out forwards;
       }
