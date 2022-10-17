@@ -624,14 +624,17 @@ footer {
               text-decoration: none;
               font-size: 1.5rem;
               color: rgb(236, 227, 227);
-              width: 400px;
-              padding: 8px;
+              width: 200px;
+              height:50px;
+              
               margin-top: 2rem;
             } //end a
 
             a:hover {
-              transform: scale(1.5);
-             border: none;
+              transform: scale(.8);
+             border: 2px solid black;
+             background-color: $primary-bg1;
+             color: black;
             } //end hover
           } /* end of worklink */
         } //pro
@@ -701,7 +704,7 @@ footer {
     }
     div.bg1 {
       width: 40%;
-      height: 70%;
+      height: 100%;
       box-shadow: inset 3px 10px 173px -3px rgba(31, 181, 207, 1);
       border: 5px solid $primary-bg1;
       border-radius: 20px;
