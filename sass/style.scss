@@ -31,6 +31,7 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 // home-container
 .home-container {
@@ -40,7 +41,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100%;
   min-height: fill-available;
   padding: 1rem;
 
@@ -52,7 +53,7 @@ body {
     h1 {
       @include myfont($name-font, 1.25rem, $black);
       #mainName {
-        font-size: 2.5rem;
+        font-size: 1.9rem;
       }
       text-transform: capitalize;
       letter-spacing: 0.1px;
@@ -129,11 +130,12 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+ 
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   min-height: fill-available;
   padding: 1rem;
 
@@ -149,11 +151,13 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 90%;
+    min-height: 100%;
     padding: 0.25rem;
+    gap:10px;
+
 
     .bg1 {
-      height: 70%;
+      height: 80%;
       @include d-flex(column, nowrap, center, center);
       background-image: $primary-gradient2;
      
@@ -166,7 +170,7 @@ body {
         @include d-flex(column, nowrap, center, center);
         background-color: $primary-gradient2;
         border-radius: 10px;
-        padding-top: 0.5rem;
+        padding: 1rem;
 
         h1 {
           font-size: 1rem;
@@ -231,6 +235,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: .5rem;
 
   /* start of about-me section */
   div#about-me {
@@ -287,7 +292,8 @@ body {
 .toolkit-container {
   @include d-flex(column, nowrap, center);
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  padding:.25rem;
 
   /* min-height:stretch; */
   /*  background-color: $primary-bg2; */
@@ -352,6 +358,9 @@ body {
         &:nth-child(8) {
           @include toolmixin(4, 3.5s);
         }
+        &:nth-child(9) {
+          @include toolmixin(4.5, 4s);
+        }
       }
       &:hover p {
         animation: tool-hover-anim 2s ease-in-out forwards;
@@ -382,6 +391,7 @@ body {
   @include d-flex(column, nowrap, center);
   width: 100vw;
   height: 100vh;
+  padding: .5rem;
   background-image: $primary-gradient1;
   h1 {
     /* padding-bottom: 2rem; */
@@ -500,7 +510,7 @@ footer {
         height: 100%;
 
         position: absolute;
-        top: 5rem;
+        top: 15rem;
         left: 10rem;
 
         h1 {
@@ -573,16 +583,23 @@ footer {
   /* work -desktop */
   #work {
     margin-bottom:1rem;
+    min-height:100vh;
+    width:80%;
     p.btn-section {
       display: none;
     }
     #project {
       align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      
+            
       .bg1 {
         box-shadow: inset 20px 20px 38px rgb(158, 101, 101);
         width: 40%;
-        height: 50%;
+        
         .pro {
+          height:60%;
           h1 {
             font-size: 1.5rem;
 
@@ -625,10 +642,10 @@ footer {
   /* about-desktop */
   .about-container {
     div#about-me {
-      width: 50%;
+      width: 40%;
       height: 70%;
       padding: 1rem;
-      @include myfont($about-text, 2rem, $primary-bg1);
+      @include myfont($about-text, 2.25rem, $primary-bg1);
       border: 5px solid $primary-bg1;
       border-radius: 20px;
       cursor: pointer;
@@ -643,7 +660,7 @@ footer {
         font-size: 2rem;
       } //end hand symbol
       p {
-        @include myfont($about-text, 1rem, $black);
+        @include myfont($about-text, 1.25rem, $black);
         font-weight: bold;
         animation: about-text-anim 3s 2s ease-in-out forwards;
       }
