@@ -488,6 +488,693 @@ footer {
 }
 /* end of contact container */
 
+//tablet and iPads style
+/* media query for tablet and iPads style*/
+@media screen and (min-width: 481px) and (max-width:768px) {
+  
+ 
+  #work {
+    
+    #project {
+     
+      width: 90%;
+     
+      padding: 0.5rem;
+    
+  
+  
+      .bg1 {
+      
+        
+        .pro {
+          
+          width: 80%;
+         
+  
+         
+         
+  
+         
+        } //end pro
+      } //end bg1
+    } //project
+  
+  } //end work container
+  
+  // about container
+  /* about page */
+  .about-container {
+   
+    padding: 1rem;
+  
+    /* start of about-me section */
+    div#about-me {
+     
+  
+      p {
+       
+        @include myfont($about-text, 1rem, $black);
+        font-weight: bolder;
+        
+      } //end p
+    } /* end of abt div */
+    
+  
+  } /* end of the about-container */
+  
+ 
+}
+
+
+
+//small screen and labtop style
+/* media query for small screen and labtop style*/
+@media screen and (min-width: 769px) and (max-width:1024px) {
+ 
+  // home-container
+  .home-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100%;
+    min-height: fill-available;
+    padding: 1rem;
+  
+    header {
+      margin-top: 2rem;
+      height: 80%;
+      flex-direction: column;
+  
+      // hero - text
+      h1 {
+        @include myfont($name-font, 1.25rem, $black);
+        #mainName {
+          font-size: 3.5rem;
+        }
+        text-transform: capitalize;
+        letter-spacing: 0.1px;
+        /* padding-left: 30px; */
+        font-weight: bold;
+        animation: text-anim 1s ease-in-out;
+      } //h1
+      p {
+        margin-top: 30px;
+        @include myfont($header-text-font, 1.25rem, $secondary-text);
+        font-weight: bold;
+        padding-left: 20px;
+        animation: text-anim 1s ease-in-out;
+      } //p
+      p:last-child {
+        padding-left: 120px;
+        margin-top: 10px;
+      }
+  
+      // navigation
+  
+      nav.nav-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  
+        .nav1 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 1rem;
+  
+          a {
+            margin-bottom: 3px;
+            text-decoration: none;
+            font-family: $name-font;
+            font-size: 1.5rem;
+            color: $primary-bg1;
+            border-bottom: solid $black 2px;
+            &:hover {
+              transform: scale(1.2);
+              border: none;
+            }
+          }
+        } //.nav1
+        .nav2 {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+  
+          a {
+            margin: 15px;
+            text-decoration: none;
+            font-family: $name-font;
+            font-size: 2rem;
+            color: $black;
+            &:hover {
+              transform: scale(1.2);
+              opacity: 0.5;
+            }
+          }
+        } //.nav2
+        .hide-on-mobile {
+          display: none;
+        }
+      } //nav
+    } //end of header
+  } //end of home-container
+  
+  #work {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+   
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 100%;
+    min-height: fill-available;
+    padding: 1rem;
+  
+    h1 {
+      @include myfont($nav-btn-font, 2.5rem, $black);
+  
+      animation: about-header-anim 1s ease-in-out;
+      &::first-letter {
+        @include myfont($header-text-font, 3rem, $primary-bg1);
+      }
+    } /* end of h1 */
+    #project {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-height: 100%;
+      padding: 0.25rem;
+      gap:10px;
+  
+  
+      .bg1 {
+        height: 80%;
+        @include d-flex(column, nowrap, center, center);
+        background-image: $primary-gradient2;
+       
+        margin-bottom: 5px;
+  
+        .pro {
+          animation: work-text-anim 1s ease-in-out forwards;
+          width: 100%;
+          height: 100%;
+          @include d-flex(column, nowrap, center, center);
+          background-color: $primary-gradient2;
+          border-radius: 10px;
+          padding: 1rem;
+  
+          h1 {
+            font-size: 1rem;
+  
+            &::first-letter {
+              color: $primary-gradient2;
+              font-size: 1rem;
+            } //end first letter
+          } //end h1
+          p {
+            font-size: .9rem;
+            color: $primary-bg1;
+            padding: 6px;
+            font-weight: bold;
+          }
+         
+  
+          .work-link {
+            margin-top: -0.5rem;
+            @include d-flex(row, nowrap, center, center);
+  
+            a {
+              width: 50px;
+              height: 15px;
+  
+              @include myfont($nav-btn-font, 2rem, black);
+              @include btn-section-link($primary-gradient2);
+              text-decoration: none;
+            } //end a
+  
+            a:hover {
+              transform: scale(0.75);
+              border: solid $primary-bg1 2px;
+            } //end hover
+          } /* end of worklink */
+        } //end pro
+      } //end bg1
+    } //project
+  
+    p.btn-section {
+      @include d-flex(row, nowrap, center, center);
+      a {
+        @include myfont($nav-btn-font, 4rem, black);
+        @include btn-section-link($primary-gradient2);
+      }
+    } /* end of p.btn-section */
+    section.btn-section {
+      display: none;
+    }
+    .btn-section a:hover {
+      transform: translateY(-5px);
+      border: solid $primary-bg1 2px;
+    } /* end of btn-section-hover */
+  } //end work container
+  
+  // about container
+  /* about page */
+  .about-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: .5rem;
+  
+    /* start of about-me section */
+    div#about-me {
+      width: 100%;
+      height: 80%;
+      padding: 1rem;
+  
+      background-image: $primary-gradient2;
+  
+      h1 {
+        @include myfont($nav-btn-font, 1.2rem, $black);
+        margin-top: 30px;
+        margin-left: 20px;
+        /* margin-bottom: -2rem; */
+        animation: about-header-anim 2s ease-in-out;
+      } //end h1
+      h1::first-letter {
+        @include myfont($header-text-font, 3rem, $black);
+      } //end first letter
+      p.hand-icon::after {
+        content: "\f256";
+        font: var(--fa-font-solid);
+        display: inline-block;
+        margin-left: 10px;
+  
+        animation: hand-anim 1s infinite;
+        color: $primary-bg1;
+        font-size: 1.5rem;
+        vertical-align: super;
+      } //end hand symbol
+      p {
+        margin-left: 20px;
+        padding-right: 10%;
+        @include myfont($about-text, .8rem, $black);
+        font-weight: bold;
+        animation: about-text-anim 3s 2s ease-in-out forwards;
+      } //end p
+    } /* end of abt div */
+    p.btn-section {
+      @include d-flex(row, nowrap, center, center);
+      a {
+        @include myfont($nav-btn-font, 4rem, $black);
+        @include btn-section-link($primary-gradient1);
+      }
+    } //end btn section
+  
+    .btn-section a:hover {
+      transform: translateY(-5px);
+      border: solid 2px $primary-bg1;
+    } //btn hover
+  } /* end of the about-container */
+  
+  /* start of tool kit */
+  .toolkit-container {
+    @include d-flex(column, nowrap, center);
+    width: 100vw;
+    min-height: 100vh;
+    padding:.25rem;
+  
+    /* min-height:stretch; */
+    /*  background-color: $primary-bg2; */
+    margin-top: 6rem;
+  
+    .bg1 {
+      width: 90%;
+      height: 80%;
+      background-image: $primary-gradient2;
+      h1 {
+        padding-bottom: 1rem;
+        text-align: center;
+        @include myfont($nav-btn-font, 1rem, $black);
+      }
+      h1::first-letter {
+        @include myfont($header-text-font, 2rem, $primary-bg1);
+      }
+      section.tool-kit {
+        @include d-flex(row, wrap, center, center);
+        /*  width: 90%; */
+  
+        gap: 15px;
+        margin: 0 auto;
+        p {
+          @include d-flex(column-reverse, nowrap, center, center);
+          padding: 20px;
+          /*  flex-basis: 70px; */
+          @include myfont($nav-btn-font, 0.5rem, $primary-bg1);
+          gap: 5px;
+          border: $primary-bg1 2px solid;
+          border-radius: 20px;
+          i {
+            text-align: center;
+            width: 60px;
+            font-size: 2rem;
+          }
+          & {
+            opacity: 0;
+            padding: 20px;
+          }
+          &:nth-child(1) {
+            @include toolmixin(0.5, 0s);
+          }
+          &:nth-child(2) {
+            @include toolmixin(1, 0.5s);
+          }
+          &:nth-child(3) {
+            @include toolmixin(1.5, 1s);
+          }
+          &:nth-child(4) {
+            @include toolmixin(2, 1.5s);
+          }
+          &:nth-child(5) {
+            @include toolmixin(2.5, 2s);
+          }
+          &:nth-child(6) {
+            @include toolmixin(3, 2.5s);
+          }
+          &:nth-child(7) {
+            @include toolmixin(3.5, 3s);
+          }
+          &:nth-child(8) {
+            @include toolmixin(4, 3.5s);
+          }
+          &:nth-child(9) {
+            @include toolmixin(4.5, 4s);
+          }
+        }
+        &:hover p {
+          animation: tool-hover-anim 2s ease-in-out forwards;
+        }
+      } /* end of tool-kit section */
+    } /* end of -bg1 */
+    .btn-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+      a {
+        @include myfont($nav-btn-font, 4rem, $black);
+        @include btn-section-link($primary-gradient1);
+      }
+    }
+    .btn-section a:hover {
+      transform: translateY(-5px);
+      border: 2px solid $primary-bg1;
+    }
+  }
+  /* end of toolkit */
+  
+  // contact container
+  /* start -contact container */
+  
+  .contact-container {
+    @include d-flex(column, nowrap, center);
+    width: 100vw;
+    height: 100vh;
+    padding: .5rem;
+    background-image: $primary-gradient1;
+    h1 {
+      /* padding-bottom: 2rem; */
+      margin-top: 15rem;
+      text-align: center;
+      @include myfont($nav-btn-font, 1.5rem, $black);
+    }
+    h1::first-letter {
+      @include myfont($header-text-font, 2.5rem, $black);
+    }
+    h1::after {
+      content: "\f0e0";
+      display: inline-block;
+      font: var(--fa-font-solid);
+      animation: contact-header-anim 1s infinite;
+    }
+    .contact-bg1-container {
+      position: relative;
+  
+      p {
+        @include myfont($header-text-font, 1rem, $black);
+        font-weight: bold;
+        animation: about-text-anim 3s 2s ease-in-out forwards;
+      }
+      .contact-para {
+        margin: 5% 5%;
+      }
+  
+      p.no-animation {
+        text-align: center;
+        padding: 20px;
+        animation: none;
+  
+        a {
+          @include mynav-bar-link(rgb(0, 255, 34));
+          @include myfont($nav-btn-font, 0.5rem, $primary-bg2);
+          border-radius: 50%;
+        }
+      }
+      /* section -contact form */
+      .contact-form {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+  
+        textarea,
+        input {
+          background-color: $primary-bg1;
+          border: 5px solid $primary-bg2;
+          color: $primary-bg2;
+          border-radius: 5px;
+          width: 100%;
+          padding: 10px;
+          font-size: .6rem;
+          margin-bottom: 20px;
+        }
+        input {
+          height: 40px;
+        }
+        button {
+          background-color: $primary-bg1;
+          border-radius: 5px;
+          border: none;
+          width: 200px;
+          padding: 10px;
+          @include myfont($nav-btn-font, 0.6rem, $primary-gradient1);
+          border: none;
+        }
+        button:hover {
+          border: solid 2px $black;
+          background-color: transparent;
+          color: $primary-bg1;
+        }
+      }
+  
+      /* section contact-form end */
+    } /* section .contact-bg1-container */
+  }
+  
+}
+
+// labtop
+/* media query for small screen and labtop style*/
+@media screen and (min-width: 1025px) and (max-width:1200px) {
+ #hide-me-desktop{
+  display:none;
+ }
+  // home-container
+  .home-container {
+    
+    header {
+     
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+     
+  
+      // hero - text
+      h1 {
+        @include myfont($name-font, 1.25rem, $black);
+        
+        #mainName {
+          font-size: 3.5rem;
+        }
+        text-transform: capitalize;
+        letter-spacing: 0.1px;
+        padding-left: 30px; 
+        font-weight: bold;
+        animation: text-anim 1s ease-in-out;
+      } //h1
+      p {
+        margin-top: 30px;
+        @include myfont($header-text-font, 1.25rem, $secondary-text);
+        font-weight: bold;
+        padding-left: 20px;
+        animation: text-anim 1s ease-in-out;
+      } //p
+      p:last-child {
+        padding-left: 120px;
+        margin-top: 10px;
+      }
+  
+      // navigation
+  
+      nav.nav-bar {
+        position: fixed;
+        right: 2rem;
+        top: 5rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        height: 100vh;
+       
+  
+        .nav1 {
+          display: flex;
+          flex-direction: column;
+         
+         
+  
+          a {
+            //border-left: 2px dotted $primary-bg1;
+
+            border-bottom: none;
+            padding-right: 5px;
+            box-shadow: none;
+            text-decoration: none;
+
+            @include myfont($nav-btn-font, 1rem, $primary-bg1);
+            margin-left: 5px;
+           
+          }
+          a:hover {
+            transform: scale(1.1);
+
+            color: rgba(33, 235, 15, 0.596);
+          }
+        } 
+        //.nav2
+       
+      } //nav
+    } //end of header
+  } //end of home-container
+  
+  #work {
+    position: relative;
+    right :5rem;
+    width: 70vw;
+    #hide{
+      display:none;
+    }
+    
+   
+  }
+  // about container
+  /* about page */
+  .about-container {
+   
+    
+  
+    /* start of about-me section */
+    div#about-me {
+      width: 70%;
+      position: relative;
+      right:6rem;
+      
+  
+  
+      p {
+       
+        @include myfont($about-text, 1rem, $black);
+        
+      } //end p
+    } /* end of abt div */
+   
+  } /* end of the about-container */
+  
+  /* start of tool kit */
+  .toolkit-container {
+    @include d-flex(column, nowrap, center);
+    width: 70%;
+    min-height: 100vh;
+    padding:1rem;
+    position: relative;
+    right:6rem;
+  
+    .btn-section {
+     display: none;
+    }
+  }
+  /* end of toolkit */
+  
+  // contact container
+  /* start -contact container */
+  .contact-container {
+   /*  line-height: 1.5rem; */
+   .hide-on-desktop{
+    display:none;
+   }
+     background-image: $primary-gradient1;
+     h1 {
+       /*  padding-top:2rem; */
+       position: relative;
+       right:6rem;
+       @include myfont($nav-btn-font, 2.5rem, $black);
+     }
+     h1::first-letter {
+       @include myfont($header-text-font, 3rem, $black);
+     }
+ 
+     .contact-bg1-container {  position: relative;
+      right:6rem;
+       p {
+         @include myfont($header-text-font, 1rem, $black);
+       }
+ 
+       /* section -contact form */
+       .contact-form {
+       
+   
+         textarea,
+         input {
+           font-size: .75rem;
+           margin-bottom: 20px;
+         }
+         
+ 
+         button {
+           @include myfont($nav-btn-font, .75rem, $primary-gradient1);
+           border: none;
+         }
+       }
+         
+       /* section contact-form end */
+     } /* section .contact-bg1-container */
+   }
+}
+
+
 // desktop style
 
 /* media query for Desktop */
@@ -762,3 +1449,4 @@ footer {
     } /* section .contact-bg1-container */
   }
 } /* end of media query */
+
