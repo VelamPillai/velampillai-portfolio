@@ -130,7 +130,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
- 
+
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -153,14 +153,13 @@ body {
     width: 100%;
     min-height: 100%;
     padding: 0.25rem;
-    gap:10px;
-
+    gap: 10px;
 
     .bg1 {
       height: 80%;
       @include d-flex(column, nowrap, center, center);
       background-image: $primary-gradient2;
-     
+
       margin-bottom: 5px;
 
       .pro {
@@ -181,12 +180,11 @@ body {
           } //end first letter
         } //end h1
         p {
-          font-size: .9rem;
+          font-size: 0.9rem;
           color: $primary-bg1;
           padding: 6px;
           font-weight: bold;
         }
-       
 
         .work-link {
           margin-top: -0.5rem;
@@ -235,7 +233,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: .5rem;
+  padding: 0.5rem;
 
   /* start of about-me section */
   div#about-me {
@@ -269,7 +267,7 @@ body {
     p {
       margin-left: 20px;
       padding-right: 10%;
-      @include myfont($about-text, .8rem, $black);
+      @include myfont($about-text, 0.8rem, $black);
       font-weight: bold;
       animation: about-text-anim 3s 2s ease-in-out forwards;
     } //end p
@@ -293,7 +291,7 @@ body {
   @include d-flex(column, nowrap, center);
   width: 100vw;
   min-height: 100vh;
-  padding:.25rem;
+  padding: 0.25rem;
 
   /* min-height:stretch; */
   /*  background-color: $primary-bg2; */
@@ -391,7 +389,7 @@ body {
   @include d-flex(column, nowrap, center);
   width: 100vw;
   height: 100vh;
-  padding: .5rem;
+  padding: 0.5rem;
   background-image: $primary-gradient1;
   h1 {
     /* padding-bottom: 2rem; */
@@ -445,7 +443,7 @@ body {
         border-radius: 5px;
         width: 100%;
         padding: 10px;
-        font-size: .6rem;
+        font-size: 0.6rem;
         margin-bottom: 20px;
       }
       input {
@@ -490,67 +488,39 @@ footer {
 
 //tablet and iPads style
 /* media query for tablet and iPads style*/
-@media screen and (min-width: 481px) and (max-width:768px) {
-  
- 
+@media screen and (min-width: 481px) and (max-width: 768px) {
   #work {
-    
     #project {
-     
       width: 90%;
-     
+
       padding: 0.5rem;
-    
-  
-  
+
       .bg1 {
-      
-        
         .pro {
-          
           width: 80%;
-         
-  
-         
-         
-  
-         
         } //end pro
       } //end bg1
     } //project
-  
   } //end work container
-  
+
   // about container
   /* about page */
   .about-container {
-   
     padding: 1rem;
-  
+
     /* start of about-me section */
     div#about-me {
-     
-  
       p {
-       
         @include myfont($about-text, 1rem, $black);
         font-weight: bolder;
-        
       } //end p
     } /* end of abt div */
-    
-  
   } /* end of the about-container */
-  
- 
 }
-
-
 
 //small screen and labtop style
 /* media query for small screen and labtop style*/
-@media screen and (min-width: 769px) and (max-width:1024px) {
- 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   // home-container
   .home-container {
     display: flex;
@@ -562,12 +532,12 @@ footer {
     min-height: 100%;
     min-height: fill-available;
     padding: 1rem;
-  
+
     header {
       margin-top: 2rem;
       height: 80%;
       flex-direction: column;
-  
+
       // hero - text
       h1 {
         @include myfont($name-font, 1.25rem, $black);
@@ -591,22 +561,22 @@ footer {
         padding-left: 120px;
         margin-top: 10px;
       }
-  
+
       // navigation
-  
+
       nav.nav-bar {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-  
+
         .nav1 {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           margin-top: 1rem;
-  
+
           a {
             margin-bottom: 3px;
             text-decoration: none;
@@ -625,7 +595,7 @@ footer {
           flex-direction: row;
           justify-content: center;
           align-items: center;
-  
+
           a {
             margin: 15px;
             text-decoration: none;
@@ -644,12 +614,12 @@ footer {
       } //nav
     } //end of header
   } //end of home-container
-  
+
   #work {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-   
+
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -657,10 +627,10 @@ footer {
     height: 100%;
     min-height: fill-available;
     padding: 1rem;
-  
+
     h1 {
       @include myfont($nav-btn-font, 2.5rem, $black);
-  
+
       animation: about-header-anim 1s ease-in-out;
       &::first-letter {
         @include myfont($header-text-font, 3rem, $primary-bg1);
@@ -672,16 +642,15 @@ footer {
       width: 100%;
       min-height: 100%;
       padding: 0.25rem;
-      gap:10px;
-  
-  
+      gap: 10px;
+
       .bg1 {
         height: 80%;
         @include d-flex(column, nowrap, center, center);
         background-image: $primary-gradient2;
-       
+
         margin-bottom: 5px;
-  
+
         .pro {
           animation: work-text-anim 1s ease-in-out forwards;
           width: 100%;
@@ -690,36 +659,35 @@ footer {
           background-color: $primary-gradient2;
           border-radius: 10px;
           padding: 1rem;
-  
+
           h1 {
             font-size: 1rem;
-  
+
             &::first-letter {
               color: $primary-gradient2;
               font-size: 1rem;
             } //end first letter
           } //end h1
           p {
-            font-size: .9rem;
+            font-size: 0.9rem;
             color: $primary-bg1;
             padding: 6px;
             font-weight: bold;
           }
-         
-  
+
           .work-link {
             margin-top: -0.5rem;
             @include d-flex(row, nowrap, center, center);
-  
+
             a {
               width: 50px;
               height: 15px;
-  
+
               @include myfont($nav-btn-font, 2rem, black);
               @include btn-section-link($primary-gradient2);
               text-decoration: none;
             } //end a
-  
+
             a:hover {
               transform: scale(0.75);
               border: solid $primary-bg1 2px;
@@ -728,7 +696,7 @@ footer {
         } //end pro
       } //end bg1
     } //project
-  
+
     p.btn-section {
       @include d-flex(row, nowrap, center, center);
       a {
@@ -744,7 +712,7 @@ footer {
       border: solid $primary-bg1 2px;
     } /* end of btn-section-hover */
   } //end work container
-  
+
   // about container
   /* about page */
   .about-container {
@@ -754,16 +722,16 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: .5rem;
-  
+    padding: 0.5rem;
+
     /* start of about-me section */
     div#about-me {
       width: 100%;
       height: 80%;
       padding: 1rem;
-  
+
       background-image: $primary-gradient2;
-  
+
       h1 {
         @include myfont($nav-btn-font, 1.2rem, $black);
         margin-top: 30px;
@@ -779,7 +747,7 @@ footer {
         font: var(--fa-font-solid);
         display: inline-block;
         margin-left: 10px;
-  
+
         animation: hand-anim 1s infinite;
         color: $primary-bg1;
         font-size: 1.5rem;
@@ -788,7 +756,7 @@ footer {
       p {
         margin-left: 20px;
         padding-right: 10%;
-        @include myfont($about-text, .8rem, $black);
+        @include myfont($about-text, 0.8rem, $black);
         font-weight: bold;
         animation: about-text-anim 3s 2s ease-in-out forwards;
       } //end p
@@ -800,24 +768,24 @@ footer {
         @include btn-section-link($primary-gradient1);
       }
     } //end btn section
-  
+
     .btn-section a:hover {
       transform: translateY(-5px);
       border: solid 2px $primary-bg1;
     } //btn hover
   } /* end of the about-container */
-  
+
   /* start of tool kit */
   .toolkit-container {
     @include d-flex(column, nowrap, center);
     width: 100vw;
     min-height: 100vh;
-    padding:.25rem;
-  
+    padding: 0.25rem;
+
     /* min-height:stretch; */
     /*  background-color: $primary-bg2; */
     margin-top: 6rem;
-  
+
     .bg1 {
       width: 90%;
       height: 80%;
@@ -833,7 +801,7 @@ footer {
       section.tool-kit {
         @include d-flex(row, wrap, center, center);
         /*  width: 90%; */
-  
+
         gap: 15px;
         margin: 0 auto;
         p {
@@ -853,33 +821,7 @@ footer {
             opacity: 0;
             padding: 20px;
           }
-          &:nth-child(1) {
-            @include toolmixin(0.5, 0s);
-          }
-          &:nth-child(2) {
-            @include toolmixin(1, 0.5s);
-          }
-          &:nth-child(3) {
-            @include toolmixin(1.5, 1s);
-          }
-          &:nth-child(4) {
-            @include toolmixin(2, 1.5s);
-          }
-          &:nth-child(5) {
-            @include toolmixin(2.5, 2s);
-          }
-          &:nth-child(6) {
-            @include toolmixin(3, 2.5s);
-          }
-          &:nth-child(7) {
-            @include toolmixin(3.5, 3s);
-          }
-          &:nth-child(8) {
-            @include toolmixin(4, 3.5s);
-          }
-          &:nth-child(9) {
-            @include toolmixin(4.5, 4s);
-          }
+          
         }
         &:hover p {
           animation: tool-hover-anim 2s ease-in-out forwards;
@@ -902,15 +844,15 @@ footer {
     }
   }
   /* end of toolkit */
-  
+
   // contact container
   /* start -contact container */
-  
+
   .contact-container {
     @include d-flex(column, nowrap, center);
     width: 100vw;
     height: 100vh;
-    padding: .5rem;
+    padding: 0.5rem;
     background-image: $primary-gradient1;
     h1 {
       /* padding-bottom: 2rem; */
@@ -929,7 +871,7 @@ footer {
     }
     .contact-bg1-container {
       position: relative;
-  
+
       p {
         @include myfont($header-text-font, 1rem, $black);
         font-weight: bold;
@@ -938,12 +880,12 @@ footer {
       .contact-para {
         margin: 5% 5%;
       }
-  
+
       p.no-animation {
         text-align: center;
         padding: 20px;
         animation: none;
-  
+
         a {
           @include mynav-bar-link(rgb(0, 255, 34));
           @include myfont($nav-btn-font, 0.5rem, $primary-bg2);
@@ -955,7 +897,7 @@ footer {
         width: 80%;
         margin: 0 auto;
         text-align: center;
-  
+
         textarea,
         input {
           background-color: $primary-bg1;
@@ -964,7 +906,7 @@ footer {
           border-radius: 5px;
           width: 100%;
           padding: 10px;
-          font-size: .6rem;
+          font-size: 0.6rem;
           margin-bottom: 20px;
         }
         input {
@@ -985,41 +927,37 @@ footer {
           color: $primary-bg1;
         }
       }
-  
+
       /* section contact-form end */
     } /* section .contact-bg1-container */
   }
-  
 }
 
 // labtop
 /* media query for small screen and labtop style*/
-@media screen and (min-width: 1025px) and (max-width:1200px) {
- #hide-me-desktop{
-  display:none;
- }
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  #hide-me-desktop {
+    display: none;
+  }
   // home-container
   .home-container {
-    
     header {
-     
       width: 100vw;
       height: 100vh;
       position: relative;
       display: flex;
       flex-direction: row;
-     
-  
+
       // hero - text
       h1 {
         @include myfont($name-font, 1.25rem, $black);
-        
+
         #mainName {
           font-size: 3.5rem;
         }
         text-transform: capitalize;
         letter-spacing: 0.1px;
-        padding-left: 30px; 
+        padding-left: 30px;
         font-weight: bold;
         animation: text-anim 1s ease-in-out;
       } //h1
@@ -1034,9 +972,9 @@ footer {
         padding-left: 120px;
         margin-top: 10px;
       }
-  
+
       // navigation
-  
+
       nav.nav-bar {
         position: fixed;
         right: 2rem;
@@ -1048,14 +986,11 @@ footer {
         align-items: center;
         width: 25%;
         height: 100vh;
-       
-  
+
         .nav1 {
           display: flex;
           flex-direction: column;
-         
-         
-  
+
           a {
             //border-left: 2px dotted $primary-bg1;
 
@@ -1066,114 +1001,109 @@ footer {
 
             @include myfont($nav-btn-font, 1rem, $primary-bg1);
             margin-left: 5px;
-           
           }
           a:hover {
             transform: scale(1.1);
 
             color: rgba(33, 235, 15, 0.596);
           }
-        } 
-        //.nav2
-       
+        }
+        .nav2 {
+          
+  
+          a {
+            
+            font-size: 1.5rem;
+            
+            
+          }
+        } //.nav2
+        
       } //nav
     } //end of header
   } //end of home-container
-  
+
   #work {
     position: relative;
-    right :5rem;
+    right: 5rem;
     width: 70vw;
-    #hide{
-      display:none;
+    #hide {
+      display: none;
     }
-    
-   
   }
   // about container
   /* about page */
   .about-container {
-   
-    
-  
     /* start of about-me section */
     div#about-me {
       width: 70%;
       position: relative;
-      right:6rem;
-      
-  
-  
+      right: 6rem;
+
       p {
-       
         @include myfont($about-text, 1rem, $black);
-        
       } //end p
     } /* end of abt div */
-   
   } /* end of the about-container */
-  
+
   /* start of tool kit */
   .toolkit-container {
     @include d-flex(column, nowrap, center);
     width: 70%;
     min-height: 100vh;
-    padding:1rem;
+    padding: 1rem;
     position: relative;
-    right:6rem;
-  
+    right: 6rem;
+
     .btn-section {
-     display: none;
+      display: none;
     }
   }
   /* end of toolkit */
-  
+
   // contact container
   /* start -contact container */
   .contact-container {
-   /*  line-height: 1.5rem; */
-   .hide-on-desktop{
-    display:none;
-   }
-     background-image: $primary-gradient1;
-     h1 {
-       /*  padding-top:2rem; */
-       position: relative;
-       right:6rem;
-       @include myfont($nav-btn-font, 2.5rem, $black);
-     }
-     h1::first-letter {
-       @include myfont($header-text-font, 3rem, $black);
-     }
- 
-     .contact-bg1-container {  position: relative;
-      right:6rem;
-       p {
-         @include myfont($header-text-font, 1rem, $black);
-       }
- 
-       /* section -contact form */
-       .contact-form {
-       
-   
-         textarea,
-         input {
-           font-size: .75rem;
-           margin-bottom: 20px;
-         }
-         
- 
-         button {
-           @include myfont($nav-btn-font, .75rem, $primary-gradient1);
-           border: none;
-         }
-       }
-         
-       /* section contact-form end */
-     } /* section .contact-bg1-container */
-   }
-}
+    /*  line-height: 1.5rem; */
+    .hide-on-desktop {
+      display: none;
+    }
+    background-image: $primary-gradient1;
+    h1 {
+      /*  padding-top:2rem; */
+      position: relative;
+      right: 6rem;
+      @include myfont($nav-btn-font, 2.5rem, $black);
+    }
+    h1::first-letter {
+      @include myfont($header-text-font, 3rem, $black);
+    }
 
+    .contact-bg1-container {
+      position: relative;
+      right: 6rem;
+      p {
+        @include myfont($header-text-font, 1rem, $black);
+      }
+
+      /* section -contact form */
+      .contact-form {
+        textarea,
+        input {
+          font-size: 0.75rem;
+          margin-bottom: 20px;
+        }
+
+        button {
+          @include myfont($nav-btn-font, 0.75rem, $primary-gradient1);
+          border: none;
+        }
+      }
+
+      /* section contact-form end */
+    } /* section .contact-bg1-container */
+  }
+}
 
 // desktop style
 
@@ -1242,7 +1172,6 @@ footer {
 
             @include myfont($nav-btn-font, 2rem, $primary-bg1);
             margin-left: 5px;
-           
           }
           a:hover {
             transform: scale(1.5);
@@ -1269,9 +1198,9 @@ footer {
 
   /* work -desktop */
   #work {
-    margin-bottom:1rem;
-    min-height:100vh;
-    width:80%;
+    margin-bottom: 1rem;
+    min-height: 100vh;
+    width: 80%;
     p.btn-section {
       display: none;
     }
@@ -1279,14 +1208,13 @@ footer {
       align-items: center;
       flex-direction: row;
       flex-wrap: wrap;
-      
-            
+
       .bg1 {
         box-shadow: inset 20px 20px 38px rgb(158, 101, 101);
         width: 40%;
-        
+
         .pro {
-          height:60%;
+          height: 60%;
           h1 {
             font-size: 1.5rem;
 
@@ -1312,16 +1240,16 @@ footer {
               font-size: 1.5rem;
               color: rgb(236, 227, 227);
               width: 200px;
-              height:50px;
-              
+              height: 50px;
+
               margin-top: 2rem;
             } //end a
 
             a:hover {
-              transform: scale(.8);
-             border: 2px solid black;
-             background-color: $primary-bg1;
-             color: black;
+              transform: scale(0.8);
+              border: 2px solid black;
+              background-color: $primary-bg1;
+              color: black;
             } //end hover
           } /* end of worklink */
         } //pro
@@ -1415,7 +1343,7 @@ footer {
   } /* end of tool container */
 
   .contact-container {
-   line-height: 1.5rem;
+    line-height: 1.5rem;
     background-image: $primary-gradient1;
     h1 {
       /*  padding-top:2rem; */
@@ -1435,12 +1363,12 @@ footer {
       .contact-form {
         textarea,
         input {
-          font-size: .75rem;
+          font-size: 0.75rem;
           margin-bottom: 20px;
         }
 
         button {
-          @include myfont($nav-btn-font, .75rem, $primary-gradient1);
+          @include myfont($nav-btn-font, 0.75rem, $primary-gradient1);
           border: none;
         }
       }
@@ -1449,4 +1377,3 @@ footer {
     } /* section .contact-bg1-container */
   }
 } /* end of media query */
-
