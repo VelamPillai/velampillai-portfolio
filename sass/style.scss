@@ -111,7 +111,7 @@ body {
           margin: 15px;
           text-decoration: none;
           font-family: $name-font;
-          font-size: 2rem;
+          font-size: .5rem;
           color: $black;
           &:hover {
             transform: scale(1.2);
@@ -600,7 +600,7 @@ footer {
             margin: 15px;
             text-decoration: none;
             font-family: $name-font;
-            font-size: 2rem;
+            font-size: .5rem;
             color: $black;
             &:hover {
               transform: scale(1.2);
@@ -1013,7 +1013,7 @@ footer {
   
           a {
             
-            font-size: 1.5rem;
+            font-size: .5rem;
             
             
           }
@@ -1189,7 +1189,7 @@ footer {
           top: 2rem;
           right: 12rem;
           a {
-            font-size: 5rem;
+            font-size: 1rem;
           }
         }
       } /* end -navigation-desktop */
@@ -1212,7 +1212,7 @@ footer {
       .bg1 {
         box-shadow: inset 20px 20px 38px rgb(158, 101, 101);
         width: 40%;
-
+        height:350px; 
         .pro {
           height: 60%;
           h1 {
@@ -1307,7 +1307,7 @@ footer {
 
   /* start toolkit-container */
   .toolkit-container {
-    width: 100vw;
+    width: 2000px;
     height: 100vh;
 
     #hide {
